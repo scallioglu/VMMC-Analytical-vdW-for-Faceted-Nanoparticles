@@ -2047,7 +2047,7 @@ pair<double, bool> OneParticleEnergy(string model, int i, double Size_i, double 
                 cout << i << " and " << j << " overlap" << endl;
              }else {
                 CurrentPairPotentialEnergy = EnergyBetweenTwoParticles(model,AASigma,CGSigma,CGEpsilon,cutoffCG,Hamaker,AtomDensity,Size_i,Size_j,BoxLength,ParticleiCentroid,ParticlejCentroid,VectorX_i,VectorY_i,VectorZ_i,VectorX_j,VectorY_j,VectorZ_j);
-                if (CurrentPairPotentialEnergy > 0 || abs(CurrentPairPotentialEnergy) > 149 || isnan(CurrentPairPotentialEnergy)) { // as a measure in case our overlapping algorithm did not detect the overlap
+                if (CurrentPairPotentialEnergy > 0 || isnan(CurrentPairPotentialEnergy)) { // as a measure in case our overlapping algorithm did not detect the overlap
                    overLapFlag = true;
                 }
              }
